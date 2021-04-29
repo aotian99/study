@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" />
+<title>二手书交易网</title>
+</head>
+
+<body>
+<div class="head">
+  <div class="top_nav">
+    <div class="top_nav_in">
+      <h2>嗨 欢迎来到二手书交易网！</h2>
+      <div class="top_nav_r">
+        <ul>
+          <li><a href="denglu.html">登录</a></li>
+          <li><a href="zhuce.html">注册</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="head_in">
+    <div class="logo"> <img src="images/logo.png"  width="250"/> </div>
+    <div class="search">
+      <form>
+        <input class="search_input" value="输入搜索关键词..." onfocus="if(this.value=='输入搜索关键词...'){this.value='';}"  />
+        <div class="search_sub"><a href="#">搜索</a></div>
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="nav">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="#">书籍分类</a>
+      <li><a href="liuyan.html">客户留言</a></li>
+      <li><a href="gouwu.html">购物车</a></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<!-------END------head-------->
+
+<form>
+<div>注册账号</div>
+<table>
+    <tr><td><span>用户名</span></td><td><input type="text"id="name" name="user_name" /></td></tr>
+    <tr><td><span>email</span></td><td><input type="text"id="email" name="user_email" /></td></tr>
+    <tr><td><span>密码</span></td><td><input type="password"id="pswd1" name="user_password" /></td></tr>
+    <tr><td><span>确认密码</span></td><td><input type="password"id="pswd2" name="user_confirm_password" /></td></tr>   
+    <tr><td>性别</td><td><input type="radio" id="male" name="user_sex" checked />男<input type="radio" id="female" name="user_sex" />女</td></tr>
+    <tr><td>手机号码</td><td><input type="text"id="number" name="user_phone1" /></td></tr>
+    <tr><td colspan="2"><input type="checkbox"id="asw" checked/>我已看过并接受<a href="#">《用户协议》</a></td></tr>
+    <tr><td colspan="2"><a href="index.html"><input type="button" name="submit" value="立即注册" onclick="return check();"/></a></td></tr>
+</table>
+</form>
+<div class="clear"></div>
+<!-------END-----main--------->
+<div class="foot">
+  <div class="foot_in">
+    <div class="footnav">
+      <ul>
+        <li style="border:none;"><a href="#">关于我们</a></li>
+        <li><a href="#">招聘信息</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">商家入驻</a></li>
+        <li><a href="#">商家后台</a></li>
+        <li><a href="#">交易平台</a></li>
+        <li><a href="#">商家社区</a></li>
+        <li><a href="#">规则中心</a></li>
+        <li><a href="#">有害信息举报</a></li>
+        <li><a href="#">用户隐私保护</a></li>
+        <li><a href="#">意见反馈</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <p>2019 NingboWYZ.com 宁波吴彦祖卖假药有限公司</p>
+    <p>营业执照：balabalabalabalabala | 网络文化经营许可证：浙网文balabalabalabalabalabala号 | 增值电信业务经营许可证：浙B2-balabalabalabala| 安全责任书 | 浙公网安备 balabalabalabala号 | </p>
+    <p>互联网药品信息服务资格证书编号：（浙)-经营性-balabalabalabala | 浙网食balabalabalabala | 出版物网络交易平台服务经营备案证 | （浙）网械平台备字[2019]第balabala号 | </p>
+  </div>
+</div>
+<div class="clear"></div>
+<!-------END----foot---------->
+</body>
+<script>
+function check(){
+	var name = document.getElementById("name");
+	var pswd1 = document.getElementById("pswd1");
+	var pswd2 = document.getElementById("pswd2");
+	var email = document.getElementById("email");
+	var number = document.getElementById("number");
+	
+	if(name.value == ""){
+		alert("登录名称为空");
+		return false;
+	}
+	if(pswd1.value==""){
+		alert("登录密码不能为空");
+		document.myform.pswd1.focus();
+		return false;
+	}
+	if(pswd2.value==""){
+		alert("密码确认不能为空");
+		document.myform.pswd2.focus();
+		return false;
+	}
+	if(pswd1.value!=pswd2.value)
+	{
+		alert("确认密码不一致");
+		return false;
+	
+		}
+	if(email.value==""){
+		alert("邮箱不能为空");
+		document.myform.email.focus();
+		return false;
+	}
+	if(number.value==""){
+		alert("手机号码不能为空");
+		document.myform.number.focus();
+		return false;
+	}
+	alert("注册成功");
+	return true;
+}
+</script>
+</html> 
